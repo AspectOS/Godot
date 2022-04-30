@@ -1,2 +1,2 @@
 # Godot
-A version of AspectOS, written in Godot. Target compatability version is BETA 3.
+A version of AspectOS, written in Godot. Target compatability version is the current 1.x.x release.
