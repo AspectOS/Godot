@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lights.mp3-8fcb53cfca9763b42ec491c37cbcc0a5.mp3str"
+
+[deps]
+
+source_file="res://Sounds/IncludedMusic/Lights.mp3"
+dest_files=[ "res://.import/Lights.mp3-8fcb53cfca9763b42ec491c37cbcc0a5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
