@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Textures/Desktops/D1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Desktop/Desktop.gd" type="Script" id=2]
+[ext_resource path="res://Themes/Taskbars.tres" type="Theme" id=3]
 
 [node name="Desktop" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -21,19 +22,19 @@ anchor_bottom = 1.0
 margin_top = -34.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource( 3 )
 
 [node name="RightStuff" type="HBoxContainer" parent="TaskBar"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 473.0
-margin_bottom = 27.0
+margin_right = 480.0
+margin_bottom = 34.0
 mouse_filter = 2
 alignment = 2
 
 [node name="Button" type="Button" parent="TaskBar/RightStuff"]
-margin_left = 430.0
-margin_right = 466.0
-margin_bottom = 20.0
+margin_left = 450.0
+margin_right = 480.0
+margin_bottom = 34.0
+theme = ExtResource( 3 )
 text = "exit"
 
 [node name="Desktop" type="MarginContainer" parent="."]
