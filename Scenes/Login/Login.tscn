@@ -30,8 +30,10 @@ margin_right = 313.0
 margin_bottom = 20.0
 size_flags_vertical = 0
 
-[node name="Button" type="Button" parent="LoginBox/Logins"]
+[node name="GuestMode" type="Button" parent="LoginBox/Logins"]
 margin_right = 313.0
 margin_bottom = 20.0
 theme = ExtResource( 2 )
 text = "Guest Mode"
+
+[connection signal="pressed" from="LoginBox/Logins/GuestMode" to="." method="_on_GuestMode_pressed"]
