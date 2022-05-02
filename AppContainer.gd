@@ -6,6 +6,9 @@ onready var vpc = $AppContainer/AppC/App/AppView
 export var app_path = "res://Scenes/BuiltinApps/TestApp/app.tscn"
 
 var inst = null
+var dragging = false
+var mouse_pos = Vector2.ZERO
+var old_pos = self.rect_position
 	
 func set_sprite():
 	var testapp = load(app_path)
@@ -21,6 +24,13 @@ func _process(delta):
 		yield(VisualServer, "frame_post_draw")
 		viewport.add_child(inst)
 		inst = null
+		
+	if not dragging:
+		mouse_pos = get_global_mouse_position()
+		old_pos = self.rect_position
+		
+	if dragging:
+		self.rect_position = old_pos + (get_global_mouse_position() - mouse_pos)
 	
 func kill():
 	self.queue_free()
@@ -28,3 +38,11 @@ func kill():
 
 func _on_Close_pressed():
 	kill()
+
+
+func _on_Move_button_down():
+	dragging = true
+
+
+func _on_Move_button_up():
+	dragging = false

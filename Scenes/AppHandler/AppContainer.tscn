@@ -20,6 +20,12 @@ margin_right = 480.0
 margin_bottom = 20.0
 alignment = 2
 
+[node name="Move" type="Button" parent="AppContainer/BarContainer"]
+margin_left = 382.0
+margin_right = 429.0
+margin_bottom = 20.0
+text = "Move"
+
 [node name="Close" type="Button" parent="AppContainer/BarContainer"]
 margin_left = 433.0
 margin_right = 480.0
@@ -49,4 +55,6 @@ handle_input_locally = false
 usage = 0
 render_target_update_mode = 3
 
+[connection signal="button_down" from="AppContainer/BarContainer/Move" to="." method="_on_Move_button_down"]
+[connection signal="button_up" from="AppContainer/BarContainer/Move" to="." method="_on_Move_button_up"]
 [connection signal="pressed" from="AppContainer/BarContainer/Close" to="." method="_on_Close_pressed"]
