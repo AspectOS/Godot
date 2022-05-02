@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://AppContainer.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/AppHandler/vp.gd" type="Script" id=2]
 
 [node name="AppContainer" type="Control"]
 anchor_right = 1.0
@@ -36,8 +37,6 @@ text = "Close"
 margin_top = 24.0
 margin_right = 480.0
 margin_bottom = 384.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="App" type="MarginContainer" parent="AppContainer/AppC"]
 margin_right = 480.0
@@ -46,15 +45,17 @@ margin_bottom = 360.0
 [node name="AppView" type="ViewportContainer" parent="AppContainer/AppC/App"]
 margin_right = 480.0
 margin_bottom = 360.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="Viewport" type="Viewport" parent="AppContainer/AppC/App/AppView"]
 size = Vector2( 480, 360 )
+size_override_stretch = true
+transparent_bg = true
 handle_input_locally = false
 usage = 0
 render_target_update_mode = 3
+script = ExtResource( 2 )
 
 [connection signal="button_down" from="AppContainer/BarContainer/Move" to="." method="_on_Move_button_down"]
 [connection signal="button_up" from="AppContainer/BarContainer/Move" to="." method="_on_Move_button_up"]
 [connection signal="pressed" from="AppContainer/BarContainer/Close" to="." method="_on_Close_pressed"]
+[connection signal="propagate_data" from="AppContainer/AppC/App/AppView/Viewport" to="." method="_on_Viewport_propagate_data"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/BuiltinApps/Run/app.gd" type="Script" id=1]
+
+[node name="Run" type="MarginContainer"]
+anchor_right = 1.0
+margin_bottom = 38.0
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 480.0
+margin_bottom = 38.0
+
+[node name="Stuff" type="VBoxContainer" parent="."]
+margin_right = 480.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Text" type="Label" parent="Stuff"]
+margin_right = 480.0
+margin_bottom = 14.0
+text = "AspectOS Low-level App Runner 1.0"
+
+[node name="Stuff" type="HBoxContainer" parent="Stuff"]
+margin_top = 18.0
+margin_right = 480.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="Stuff/Stuff"]
+margin_right = 431.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+wrap_enabled = true
+caret_blink = true
+
+[node name="Enter" type="Button" parent="Stuff/Stuff"]
+margin_left = 435.0
+margin_right = 480.0
+margin_bottom = 20.0
+text = "Enter"
+
+[connection signal="pressed" from="Stuff/Stuff/Enter" to="." method="_on_Enter_pressed"]

@@ -51,3 +51,6 @@ func start_app(app_name : String):
 			pass
 		else:
 			pass_error("App '" + app_name + "' does not exist.")
+
+func propagate_data(type, data):
+	get_parent().propagate_data(type, data)

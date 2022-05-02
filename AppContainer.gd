@@ -16,7 +16,7 @@ func set_sprite():
 	inst = testapp.instance()
 	
 func _process(delta):
-	viewport.size = Vector2(vpc.margin_right - vpc.margin_left, vpc.margin_bottom - vpc.margin_top)
+	#viewport.size = Vector2(vpc.margin_right - vpc.margin_left, vpc.margin_bottom - vpc.margin_top)
 	
 	
 	
@@ -46,3 +46,9 @@ func _on_Move_button_down():
 
 func _on_Move_button_up():
 	dragging = false
+
+func propagate_data(type, data):
+	get_parent().propagate_data(type, data)
+
+func _on_Viewport_propagate_data(type, data):
+	propagate_data(type, data)
