@@ -28,15 +28,14 @@ margin_right = 480.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 
-[node name="TextEdit" type="TextEdit" parent="Stuff/Stuff"]
-margin_right = 431.0
+[node name="TextEdit" type="LineEdit" parent="Stuff/Stuff"]
+margin_right = 437.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
-wrap_enabled = true
 caret_blink = true
 
 [node name="Enter" type="Button" parent="Stuff/Stuff"]
-margin_left = 435.0
+margin_left = 441.0
 margin_right = 480.0
 margin_bottom = 20.0
 text = "Enter"

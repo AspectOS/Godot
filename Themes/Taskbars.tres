@@ -2,9 +2,7 @@
 
 [ext_resource path="res://Themes/Styleboxes/ButtonDefault.tres" type="StyleBox" id=1]
 [ext_resource path="res://Themes/Styleboxes/ButtonPressed.tres" type="StyleBox" id=2]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.384314, 0.494118, 0.878431, 1 )
+[ext_resource path="res://Themes/Styleboxes/Panel.tres" type="StyleBox" id=3]
 
 [resource]
 Button/colors/font_color = Color( 0.0666667, 0.0666667, 0.133333, 1 )
@@ -14,4 +12,10 @@ Button/colors/font_color_pressed = Color( 0.054902, 0.0509804, 0.180392, 1 )
 Button/styles/hover = ExtResource( 2 )
 Button/styles/normal = ExtResource( 1 )
 Button/styles/pressed = ExtResource( 2 )
-PanelContainer/styles/panel = SubResource( 1 )
+LineEdit/styles/focus = ExtResource( 2 )
+LineEdit/styles/normal = ExtResource( 1 )
+Panel/styles/panel = ExtResource( 3 )
+PanelContainer/styles/panel = ExtResource( 3 )
+TextEdit/styles/focus = ExtResource( 2 )
+TextEdit/styles/normal = ExtResource( 1 )
+TooltipPanel/styles/panel = ExtResource( 3 )

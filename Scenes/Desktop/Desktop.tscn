@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Textures/Desktops/D1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Desktop/Desktop.gd" type="Script" id=2]
 [ext_resource path="res://Themes/Taskbars.tres" type="Theme" id=3]
 [ext_resource path="res://Sounds/SFX/LoginFX.wav" type="AudioStream" id=4]
 [ext_resource path="res://Scenes/AppHandler/AppHandler.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Textures/aspectos-logo.png" type="Texture" id=6]
 
 [node name="Desktop" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -21,22 +22,40 @@ stretch_mode = 7
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -50.0
+margin_top = -28.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 
 [node name="RightStuff" type="HBoxContainer" parent="TaskBar"]
 margin_right = 480.0
-margin_bottom = 50.0
+margin_bottom = 28.0
 mouse_filter = 2
 alignment = 2
 
+[node name="AppMenu" type="TextureButton" parent="TaskBar/RightStuff"]
+margin_right = 32.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Spacer" type="Container" parent="TaskBar/RightStuff"]
+margin_left = 36.0
+margin_right = 443.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
 [node name="Button" type="Button" parent="TaskBar/RightStuff"]
+margin_left = 447.0
 margin_right = 480.0
-margin_bottom = 50.0
+margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
 theme = ExtResource( 3 )
 custom_constants/hseparation = 0
 text = "exit"
