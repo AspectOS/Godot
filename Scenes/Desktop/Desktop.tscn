@@ -21,22 +21,24 @@ stretch_mode = 7
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -34.0
+margin_top = -50.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 
 [node name="RightStuff" type="HBoxContainer" parent="TaskBar"]
 margin_right = 480.0
-margin_bottom = 34.0
+margin_bottom = 50.0
 mouse_filter = 2
 alignment = 2
 
 [node name="Button" type="Button" parent="TaskBar/RightStuff"]
-margin_left = 450.0
 margin_right = 480.0
-margin_bottom = 34.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 3 )
+custom_constants/hseparation = 0
 text = "exit"
 
 [node name="Desktop" type="MarginContainer" parent="."]

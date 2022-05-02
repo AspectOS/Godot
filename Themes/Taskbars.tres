@@ -4,13 +4,13 @@
 [ext_resource path="res://Themes/Styleboxes/ButtonPressed.tres" type="StyleBox" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.917647, 0.631373, 0.34902, 1 )
+bg_color = Color( 0.384314, 0.494118, 0.878431, 1 )
 
 [resource]
 Button/colors/font_color = Color( 0.0666667, 0.0666667, 0.133333, 1 )
-Button/colors/font_color_focus = Color( 0.227451, 0.34902, 1, 1 )
-Button/colors/font_color_hover = Color( 0.878431, 0.878431, 0.937255, 1 )
-Button/colors/font_color_pressed = Color( 0.0666667, 0.0666667, 0.133333, 1 )
+Button/colors/font_color_focus = Color( 0.054902, 0.0509804, 0.180392, 1 )
+Button/colors/font_color_hover = Color( 0.054902, 0.0509804, 0.180392, 1 )
+Button/colors/font_color_pressed = Color( 0.054902, 0.0509804, 0.180392, 1 )
 Button/styles/hover = ExtResource( 2 )
 Button/styles/normal = ExtResource( 1 )
 Button/styles/pressed = ExtResource( 2 )

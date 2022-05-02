@@ -20,6 +20,10 @@ config/windows_native_icon="res://Textures/aspectos-logo.ico"
 window/size/width=480
 window/size/height=360
 
+[gui]
+
+theme/custom="res://Themes/Taskbars.tres"
+
 [input]
 
 ui_control={
