@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://AppContainer.gd" type="Script" id=1]
+
+[node name="AppContainer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AppContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BarContainer" type="HBoxContainer" parent="AppContainer"]
+margin_right = 480.0
+margin_bottom = 20.0
+alignment = 2
+
+[node name="Close" type="Button" parent="AppContainer/BarContainer"]
+margin_left = 433.0
+margin_right = 480.0
+margin_bottom = 20.0
+text = "Close"
+
+[node name="AppC" type="MarginContainer" parent="AppContainer"]
+margin_top = 24.0
+margin_right = 480.0
+margin_bottom = 384.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="App" type="MarginContainer" parent="AppContainer/AppC"]
+margin_right = 480.0
+margin_bottom = 360.0
+
+[node name="AppView" type="ViewportContainer" parent="AppContainer/AppC/App"]
+margin_right = 480.0
+margin_bottom = 360.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Viewport" type="Viewport" parent="AppContainer/AppC/App/AppView"]
+size = Vector2( 480, 360 )
+handle_input_locally = false
+usage = 0
+render_target_update_mode = 3
+
+[connection signal="pressed" from="AppContainer/BarContainer/Close" to="." method="_on_Close_pressed"]

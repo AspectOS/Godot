@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Textures/Desktops/D1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Desktop/Desktop.gd" type="Script" id=2]
 [ext_resource path="res://Themes/Taskbars.tres" type="Theme" id=3]
 [ext_resource path="res://Sounds/SFX/LoginFX.wav" type="AudioStream" id=4]
+[ext_resource path="res://Scenes/AppHandler/AppHandler.tscn" type="PackedScene" id=5]
 
 [node name="Desktop" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -46,5 +47,7 @@ mouse_filter = 2
 [node name="Login" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
+
+[node name="AppHandler" parent="." instance=ExtResource( 5 )]
 
 [connection signal="pressed" from="TaskBar/RightStuff/Button" to="." method="_on_Button_pressed"]

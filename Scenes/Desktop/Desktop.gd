@@ -9,6 +9,14 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_metrics()
+	
+func pass_error(error):
+	assert(true, "[ERROR]: " + error)
+	OS.alert(error, "There Was An Error")
+	
+func _process(delta):
+	if Input.is_action_just_pressed("ui_down"):
+		$AppHandler.start_app("TestApp")
 
 
 func screen_metrics():
