@@ -12,7 +12,7 @@ config_version=4
 
 config/name="AspectOS"
 run/main_scene="res://Scenes/Login/Login.tscn"
-config/icon="res://icon.png"
+config/icon="res://Textures/aspectos-logo.png"
 
 [display]
 
